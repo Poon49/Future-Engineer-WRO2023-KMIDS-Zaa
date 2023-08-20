@@ -39,7 +39,9 @@ The Medium Motor also includes a built-in Rotation Sensor (with 1-degree resolut
      ![image](https://github.com/Poon49/Future-Engineer-WRO2023-KMIDS-Zaa/assets/76239146/67e4baf2-e0e3-4a88-986c-2da8c2f5b72e)
 
 
-                                    
+   - Speed 240-250 rpm
+   - Dynamic Torque  8 N/cm 
+   - Torque 12 N/cm                               
 
 4.	Servo motor MG90S : MG90S servo, Metal gear with one bearing can rotate approximately
    180 degrees (90 in each direction),
