@@ -54,8 +54,22 @@ Specifications
 -  Operating voltage: 4.8 V – 6V
 -  Dead band width: 5 µs
 
+5. ESP32-DevKitC-WROOM-32U module
 
-5.	 BNO055 (Gyro sensor) :
+![image](https://github.com/Poon49/Future-Engineer-WRO2023-KMIDS-Zaa/assets/76239146/61fbd9cf-e68c-4662-a396-899e0dbe7449)
+
+
+
+Product Category:	WiFi Development Tools - 802.11
+RoHS:	N
+Protocol Supported:	802.11 b/g/n
+Frequency:	2.4 GHz to 2.5 GHz
+Operating Supply Voltage:	5 V
+Protocol - WiFi - 802.11:	WiFi
+Dimensions:	54.4 mm x 27.9 mm
+Interface Type:	USB
+
+6.	 BNO055 (Gyro sensor) :
    
        ![image](https://github.com/Poon49/Future-Engineer-WRO2023-KMIDS-Zaa/assets/76239146/3b3a0e9b-205f-4812-9b9e-b1fa66ef5c1a)
 
@@ -78,7 +92,7 @@ https://cdn-shop.adafruit.com/datasheets/BST_BNO055_DS000_12.pdf
 Library :
 https://github.com/adafruit/Adafruit_BNO055
 
-6.	Step-Down Module 5.0 HW-688,24V/12V To 5V USB DC-DC
+7.	Step-Down Module 5.0 HW-688,24V/12V To 5V USB DC-DC
       ![image](https://github.com/Poon49/Future-Engineer-WRO2023-KMIDS-Zaa/assets/76239146/c1147db0-2194-446d-b596-359ff14be7e9)
 
                                       
@@ -88,7 +102,7 @@ Specifications:
   - Material: electronic components
   - Size: 65*28*13mm
                                
-7.	DTOF Lidar D300 :
+8.	DTOF Lidar D300 :
 
   	 ![image](https://github.com/Poon49/Future-Engineer-WRO2023-KMIDS-Zaa/assets/76239146/120ea4f2-add5-40c5-a7f0-19abf95b6133)  ![image](https://github.com/Poon49/Future-Engineer-WRO2023-KMIDS-Zaa/assets/76239146/707dbe24-6391-4d58-b359-3ea840bf13a6)
                                 
@@ -116,7 +130,7 @@ Product parameters
   - Standard asynchronous serial port (UART)     :     Communication interface
 
 
-8.	Sony IMX219 (8 MP )camera module with M12 lens LS40136 for Raspberry Pi:
+9.	Sony IMX219 (8 MP )camera module with M12 lens LS40136 for Raspberry Pi:
  
       ![image](https://github.com/Poon49/Future-Engineer-WRO2023-KMIDS-Zaa/assets/76239146/ba12e392-e3a4-4454-af30-5a9c78d2b9d9)
 
@@ -140,7 +154,7 @@ Lens :
 Camera Board Size 	36mm x 36mm
 Peaking Current	300mA
 
-9.	STCS34725 RGB Color Sensor Module:
+10.	STCS34725 RGB Color Sensor Module:
 
       ![image](https://github.com/Poon49/Future-Engineer-WRO2023-KMIDS-Zaa/assets/76239146/eee7470c-9a9c-4193-bee6-6dca20c11d28)
 
