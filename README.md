@@ -144,9 +144,10 @@ Peaking Current	300mA
 
       ![image](https://github.com/Poon49/Future-Engineer-WRO2023-KMIDS-Zaa/assets/76239146/eee7470c-9a9c-4193-bee6-6dca20c11d28)
 
+   White Light Sensing with IR Blocking Filter. Programmable analog gain and integration time. Programmable upper and lower thresholds with persistence filter. 65-uA Wait State with Programmable Wait State Time from 2.4 ms to &gt; 7 Seconds. I2C Fast Mode Compatible Interface. Input Voltage Levels Compatible with VDD or 1.8 V Bus. Register Set and Pin Compatible with the TCS3x71 Series. Small 2 mm*2.4 mm Dual Flat No-Lead (FN).
   - Full RGB Color sensor.
-Communication via I2C.
-Operating voltage: 3.0V to 5.0 VDC
+  - Communication via I2C.
+  - Operating voltage: 3.0V to 5.0 VDC
 
 ## Modules used:
 Other modules include:
@@ -157,13 +158,20 @@ Other modules include:
 5.	RPI.GPIO- Configure, read, and write to GPIO pins.
 6.	DTOF Lidar D300 
 7.	Sony IMX219 camera module with M12 lens
+8.	RGB Color Module
 
  
 ## More detail about program functions:	
+
 Operation           :     Run ROS2 operate on Ubuntu Mate Platform :
  
 IMU connection :     BNO055 -> (i2c) -> ESP32 -> (serial) -> Raspberry PI
+
 The ROS master is used to manage all robot nodes, which can be visualised through a visual component named Robot Visualizer (Rviz). The ROS master runs on the PC. Communication between the ROS master and microcontroller board is accomplished through 802.11n networking. When the Wi-Fi boots up, it creates a hotspot. The SSH can be integrated with Raspberry Pi, and the robot can be directly controlled from a laptop. The master realises a standard function such as SLAM or navigation
+
+![image](https://github.com/Poon49/Future-Engineer-WRO2023-KMIDS-Zaa/assets/76239146/ce5bdb2f-be14-4239-b896-a951e35297d4)
+
+
 Control direction autonomous vehicle follow the game rule by:
 1.	Use distance from Lidar front,left,right of Wall  for decision control direction car.
 2.	Area comparation between Wall Left and Wall Right
