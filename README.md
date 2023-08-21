@@ -1,4 +1,4 @@
-# WRO-Future-Engineers 2023
+# WRO-Future-Engineers 2023 (KMIDS Zaa Team)
 This repository contains codes and working principle that are used to creating the autonomous vehicle for competition.
 
 ### Car electromechanical parts:
@@ -95,6 +95,7 @@ Library :
 https://github.com/adafruit/Adafruit_BNO055
 
 7.	Step-Down Module 5.0 HW-688,24V/12V To 5V USB DC-DC
+   
       ![image](https://github.com/Poon49/Future-Engineer-WRO2023-KMIDS-Zaa/assets/76239146/c1147db0-2194-446d-b596-359ff14be7e9)
 
                                       
@@ -188,25 +189,51 @@ The ROS master is used to manage all robot nodes, which can be visualised throug
 ![image](https://github.com/Poon49/Future-Engineer-WRO2023-KMIDS-Zaa/assets/76239146/ce5bdb2f-be14-4239-b896-a951e35297d4)
 
 
-Control direction autonomous vehicle follow the game rule by:
+### Control direction autonomous vehicle follow the game rule by:
 1.	Use distance from Lidar front,left,right of Wall  for decision control direction car.
-2.	Area comparation between Wall Left and Wall Right
-a.	If Area-Wall Left > Area-Wall Right --> Control vehicle turn right.
-b.	If Area-Wall Left < Area-Wall Right --> Control vehicle turn left.
 
+   ![image](https://github.com/Poon49/Future-Engineer-WRO2023-KMIDS-Zaa/assets/76239146/1791e17b-3fb1-49ce-a4a2-5d5b942efbf8)
 
-Main Functions :
-1.find_blobs funtion ( OpenMV)
+   -  Forward by condition :
+      Average distance left and distance right from value of Lidar.
+
+      ![image](https://github.com/Poon49/Future-Engineer-WRO2023-KMIDS-Zaa/assets/76239146/0708fc3e-3701-4922-9941-7fd20c762cf6)
+
+   - Turn Left/ Right under condition :
+ 
+      If  Distance  Left     >   Distance  Right     -->   Control vehicle turn left.
+      If  Distance  Right   >   Distance  Left     -->   Control vehicle turn right.
+      Distance Front is control distance car with wall when turn 
+2.	Accurate parking position by degree value of IMU and distance left,right at start point.
+      PID Control:
+      PD Control is enough for steering, As below  kp and kd for adjust Servo motor :
+      PD = int((kp*error) + (kd*rateError))
+
+### Main Functions :
+1.Open CV
 2.IMU function (Gyroscope)
-1.find_blobs Function
-find_blobs Function to find the specified colour block in the image and use thresholds for identify the threshold of colour After that ROI select a range in the image field of view as the area of colour detection after that img.find_blobs
-Wall-Left
+3.Light Detection
 
-Wall-Right
+1.Open CV
+Detection of color using cv2.inRange(image, lower, upper) find out a range of pixel  ,then Lower,Upper keep in form numpy :
 
+   #Green
+   low_green=np.array([35,50,50])
+   high_green=np.array([85,255,255])
 
-Lane Detection:
-Blue Lane
+   #Red
+   low_red=np.array([150,100,100])
+   high_red=np.array([180,255,255])
+
+2. IMU function (Gyroscope)  
+      Turn direction to be decision by IMU of Gyroscope.
+      error = heading-imu_x
+      imu_x = degree reading from sensor
+      error = heading-int(self.yaw)
+      bring error value for adjust speed Servo motor for run to the target value, speed of Servo motor depends on error value.
+3. RGB Light detection
+   Lane Detection
+   Blue Lane
 
 
 Orange Lane
@@ -214,20 +241,5 @@ Orange Lane
 1.	We determine if the robot should turn left or right on the turn by using what lane our camera find first.
 2.	If we found blue first, then we turn left
 3.	If we found orange first, then we turn right.
-4.	
-PID Control:
-PD Control is enough for steering, As below  kp and kd for adjust Servo motor :
-PD = int((kp*error) + (kd*rateError))
-1. IMU function (Gyroscope)  
-Turn direction to be decision by IMU of Gyroscope.
- 
-error = heading-imu_x
-imu_x = degree reading from sensor
- error = heading-int(self.yaw)
- if(error > 180):
-     error =  error-359
- elif(error < -180):
-      error =  359+error
+   
 
-
-And then send error value for adjust speed Servo motor for run to the target value, speed of Servo motor depends on error value.
