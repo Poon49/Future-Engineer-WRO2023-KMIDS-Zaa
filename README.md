@@ -168,7 +168,7 @@ Peaking Current	300mA
 
 ## Calculation speed and time
 
- ![image](https://github.com/Poon49/Future-Engineer-WRO2023-KMIDS-Zaa/assets/76239146/e92266c6-9c40-4cdc-b07d-9d4ee45fac76)
+![image](https://github.com/Poon49/Future-Engineer-WRO2023-KMIDS-Zaa/assets/76239146/ffc3e52d-3454-4aa8-b830-b9a40c1c2825)
 
 
 
@@ -199,12 +199,15 @@ The ROS master is used to manage all robot nodes, which can be visualised throug
 ### Control direction autonomous vehicle follow the game rule by:
 1.	Use distance from Lidar front,left,right of Wall  for decision control direction car.
 
-   ![image](https://github.com/Poon49/Future-Engineer-WRO2023-KMIDS-Zaa/assets/76239146/1791e17b-3fb1-49ce-a4a2-5d5b942efbf8)
+![image](https://github.com/Poon49/Future-Engineer-WRO2023-KMIDS-Zaa/assets/76239146/cc7a5115-d6f8-4152-8125-1162e77ed2f3)
+
+
 
    -  Forward by condition :
       Average distance left and distance right from value of Lidar.
 
-      ![image](https://github.com/Poon49/Future-Engineer-WRO2023-KMIDS-Zaa/assets/76239146/0708fc3e-3701-4922-9941-7fd20c762cf6)
+![image](https://github.com/Poon49/Future-Engineer-WRO2023-KMIDS-Zaa/assets/76239146/dd7be596-a08e-435c-8477-0d088106589e)
+
 
    - Turn Left/ Right under condition :
  
@@ -234,20 +237,19 @@ Detection of color using cv2.inRange(image, lower, upper) find out a range of pi
 
 2. IMU function (Gyroscope)  
       Turn direction to be decision by IMU of Gyroscope.
-   ![image](https://github.com/Poon49/Future-Engineer-WRO2023-KMIDS-Zaa/assets/76239146/f00643a4-960d-4e77-a829-d26207358349)
+   
+![image](https://github.com/Poon49/Future-Engineer-WRO2023-KMIDS-Zaa/assets/76239146/e1377d39-915f-4696-8315-db456b7e2908)
+
 
       
       error = heading-int(self.yaw)
    
       bring error value for adjust speed Servo motor for run to the target value, speed of Servo motor depends on error value.
 4. RGB Light detection
-   Lane Detection
-   
-   Blue Lane
-   Orange Lane
+   Lane Detection : Blue Lane/ Orange Lane
 
    1.	We determine if the robot should turn left or right on the turn by using what lane our camera find first.
-   2.	If we found blue first, then we turn left
-   3.	If we found orange first, then we turn right.
+   2.	If robot found blue first, then it's turn left
+   3.	If robot found orange first, then it's turn right.
    
 
