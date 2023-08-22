@@ -62,14 +62,14 @@ Specifications
 
 
 
-Product Category:	WiFi Development Tools - 802.11
-RoHS:	N
-Protocol Supported:	802.11 b/g/n
-Frequency:	2.4 GHz to 2.5 GHz
-Operating Supply Voltage:	5 V
-Protocol - WiFi - 802.11:	WiFi
-Dimensions:	54.4 mm x 27.9 mm
-Interface Type:	USB
+- Product Category:	WiFi Development Tools - 802.11
+- RoHS:	N
+- Protocol Supported:	802.11 b/g/n
+- Frequency:	2.4 GHz to 2.5 GHz
+- Operating Supply Voltage:	5 V
+- Protocol - WiFi - 802.11:	WiFi
+- Dimensions:	54.4 mm x 27.9 mm
+- Interface Type:	USB
 
 6.	 BNO055 (Gyro sensor) :
    
@@ -135,7 +135,7 @@ Product parameters
 
 9.	Sony IMX219 (8 MP )camera module with M12 lens LS40136 for Raspberry Pi:
  
-      ![image](https://github.com/Poon49/Future-Engineer-WRO2023-KMIDS-Zaa/assets/76239146/ba12e392-e3a4-4454-af30-5a9c78d2b9d9)
+   ![image](https://github.com/Poon49/Future-Engineer-WRO2023-KMIDS-Zaa/assets/76239146/ba12e392-e3a4-4454-af30-5a9c78d2b9d9)
 
 Specifications
 Camera :
@@ -166,6 +166,12 @@ Peaking Current	300mA
   - Communication via I2C.
   - Operating voltage: 3.0V to 5.0 VDC
 
+## Calculation speed and time
+
+ ![image](https://github.com/Poon49/Future-Engineer-WRO2023-KMIDS-Zaa/assets/76239146/e92266c6-9c40-4cdc-b07d-9d4ee45fac76)
+
+
+
 ## Modules used:
 Other modules include:
 1.	Board- Raspberry Pi 4 4GB
@@ -185,6 +191,7 @@ Operation           :     Run ROS2 operate on Ubuntu Mate Platform :
 IMU connection :     BNO055 -> (i2c) -> ESP32 -> (serial) -> Raspberry PI
 
 The ROS master is used to manage all robot nodes, which can be visualised through a visual component named Robot Visualizer (Rviz). The ROS master runs on the PC. Communication between the ROS master and microcontroller board is accomplished through 802.11n networking. When the Wi-Fi boots up, it creates a hotspot. The SSH can be integrated with Raspberry Pi, and the robot can be directly controlled from a laptop. The master realises a standard function such as SLAM or navigation
+## ROS Flow Chart
 
 ![image](https://github.com/Poon49/Future-Engineer-WRO2023-KMIDS-Zaa/assets/76239146/ce5bdb2f-be14-4239-b896-a951e35297d4)
 
