@@ -234,19 +234,20 @@ Detection of color using cv2.inRange(image, lower, upper) find out a range of pi
 
 2. IMU function (Gyroscope)  
       Turn direction to be decision by IMU of Gyroscope.
-      error = heading-imu_x
-      imu_x = degree reading from sensor
+   ![image](https://github.com/Poon49/Future-Engineer-WRO2023-KMIDS-Zaa/assets/76239146/f00643a4-960d-4e77-a829-d26207358349)
+
+      
       error = heading-int(self.yaw)
+   
       bring error value for adjust speed Servo motor for run to the target value, speed of Servo motor depends on error value.
-3. RGB Light detection
+4. RGB Light detection
    Lane Detection
+   
    Blue Lane
+   Orange Lane
 
-
-Orange Lane
-
-1.	We determine if the robot should turn left or right on the turn by using what lane our camera find first.
-2.	If we found blue first, then we turn left
-3.	If we found orange first, then we turn right.
+   1.	We determine if the robot should turn left or right on the turn by using what lane our camera find first.
+   2.	If we found blue first, then we turn left
+   3.	If we found orange first, then we turn right.
    
 
